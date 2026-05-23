@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wedding-frontend": {
+    "wedding": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "wedding-frontend:build:production"
+              "buildTarget": "wedding:build:production"
             },
             "development": {
-              "buildTarget": "wedding-frontend:build:development"
+              "buildTarget": "wedding:build:development"
             }
           },
           "defaultConfiguration": "development"
