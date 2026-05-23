@@ -1,0 +1,159 @@
+<main class="wedding-page">
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="topbar__brand" href="#inizio" aria-label="Torna all'inizio">C&M</a>
+      <nav class="topbar__nav" aria-label="Navigazione principale">
+        <button class="menu-button" type="button" aria-label="Apri menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="topbar__menu">
+          <a *ngFor="let link of quickLinks" [href]="link.href">{{ link.label }}</a>
+          <a href="#faqs">FAQ</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inizio" class="hero">
+    <div class="container hero__inner">
+      <img class="hero__logo user-select-none" src="/new-assets/img.png" alt="Logo Caterina e Massimiliano">
+
+      <h1 class="user-select-none">
+        <span>Caterina</span>
+        <small>e</small>
+        <span>Massimiliano</span>
+      </h1>
+
+      <div class="hero__rule" aria-hidden="true"></div>
+      <p class="date-line">18 Settembre 2026</p>
+      <p class="venue-line">Antica Fattoria di Paterno</p>
+      <p class="venue-line venue-line--small">Montespertoli (FI)</p>
+
+      <a class="primary-action primary-action--hero user-select-none" href="#giornata">Scopri il nostro giorno</a>
+      <!--div style=" display: flex;  flex-wrap: nowrap;">
+        <a class="primary-action primary-action--hero" href="#giornata">Il viaggio</a>
+        <a class="primary-action primary-action--hero" style="margin-right:1rem; margin-left:1rem" href="#giornata">Il luogo</a>
+        <a class="primary-action primary-action--hero" href="#rsvp">RSVP</a>
+      </div-->
+      <a class="scroll-cue user-select-none" href="#giornata" aria-label="Vai alla giornata"></a>
+    </div>
+
+    <img class="hero__bottom-image" src="/new-assets/bottom_homepage.jpeg" alt="Illustrazione Antica Fattoria di Paterno">
+  </section>
+
+  <section id="giornata" class="section schedule-section">
+    <div class="container section__inner section__inner--center">
+      <div class="section-heading section-heading--center">
+        <h2>La giornata</h2>
+        <span class="flourish" aria-hidden="true"></span>
+      </div>
+
+      <div class="timeline" aria-label="Programma della giornata">
+        <article class="timeline__item" *ngFor="let item of scheduleItems">
+          <div class="timeline__icon" [attr.aria-label]="item.title">
+              <i class="ph" [ngClass]="returnIcon(item.title)"></i>
+          </div>
+          <div class="timeline__marker" aria-hidden="true"></div>
+          <div class="timeline__content">
+            <time>{{ item.time }}</time>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="lista-nozze" class="section registry-section">
+    <div class="container section__inner">
+      <div class="section-heading">
+        <p class="eyebrow">Lista nozze</p>
+        <h2>Il nostro viaggio in Sud Africa</h2>
+      </div>
+
+      <div class="feature-layout">
+        <div class="photo-frame photo-frame--south-africa">
+          <img src="/new-assets/giraffalocation.jpeg" alt="Viaggio in Sud Africa">
+        </div>
+
+        <div class="feature-copy">
+          <p>
+            Per chi desidera partecipare alla nostra lista nozze, abbiamo pensato a un contributo
+            per il viaggio che sogniamo di fare insieme.
+          </p>
+          <a class="primary-action" [href]="registryUrl" target="_blank" rel="noreferrer">Clicca qui</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="luogo" class="section place-section">
+    <div class="container section__inner">
+      <div class="section-heading">
+        <p class="eyebrow">Il posto</p>
+        <h2>Antica Fattoria di Paterno</h2>
+      </div>
+
+      <div class="place-grid">
+        <div class="carousel" aria-label="Carosello fotografico Antica Fattoria di Paterno">
+          <article class="carousel__item" *ngFor="let item of carouselItems">
+            <img [src]="item.src" [alt]="item.label">
+            <span>{{ item.label }}</span>
+          </article>
+        </div>
+
+        <a class="map-preview" [href]="mapsUrl" target="_blank" rel="noreferrer">
+          <iframe
+            title="Indicazioni Google Maps"
+            src="https://www.google.com/maps?q=Antica%20Fattoria%20di%20Paterno&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="map-preview__label">
+            <span>Indicazioni Maps</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="section rsvp-section">
+    <div class="container section__inner">
+      <div class="rsvp-panel">
+        <div>
+          <p class="eyebrow">Partecipazione</p>
+          <p>Il form ci aiuta a raccogliere conferme, preferenze alimentari ed eventuale interesse per il servizio bus.</p>
+        </div>
+        <a class="primary-action" [href]="rsvpUrl" target="_blank" rel="noreferrer">Vai al Google Form</a>
+      </div>
+
+      <div id="faqs" class="faq-section">
+        <div class="section-heading section-heading--compact">
+          <p class="eyebrow">FAQ</p>
+          <h2>Info utili</h2>
+        </div>
+
+        <div class="faq-list" aria-label="Domande frequenti">
+          <details class="faq-item" *ngFor="let faq of faqs">
+            <summary>
+              <span>{{ faq.title }}</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__content">
+              <p>{{ faq.text }}</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>Caterina & Massimiliano</p>
+      <p>Grazie per essere parte di questo giorno cosi importante per noi.</p>
+    </div>
+  </footer>
+</main>
