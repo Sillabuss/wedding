@@ -11,7 +11,7 @@ import {NgClass, NgFor} from '@angular/common';
 export class WeddingHomeComponent {
     protected readonly quickLinks = [
         {label: 'La giornata', href: '#giornata'},
-        {label: 'Luogo', href: '#luogo'},
+        {label: 'La location', href: '#luogo'},
         {label: 'Lista nozze', href: '#lista-nozze'},
         {label: 'RSVP', href: '#rsvp'},
     ];
@@ -30,7 +30,7 @@ export class WeddingHomeComponent {
         {
             time: '20:15',
             title: 'Cena',
-            text: 'Cena insieme nella cornice della fattoria'
+            text: 'Cena insieme nella cornice della villa'
         },
         {
             time: '23:00',
@@ -45,19 +45,8 @@ export class WeddingHomeComponent {
         {label: 'Vi aspettiamo!', src: '/antica fattoria/img_2.png'},
     ];
 
-    protected readonly faqs = [
-        {
-            title: 'Preferenze alimentari',
-            text: 'Vi chiederemo di segnalarci allergie, intolleranze o esigenze particolari nel form RSVP.'
-        },
-        {
-            title: 'Servizio bus',
-            text: 'Stiamo valutando un servizio bus/navetta. Inserite la vostra preferenza nel form RSVP, cosi possiamo organizzarci al meglio.'
-        },
-    ];
-
     protected readonly registryUrl = 'https://eventi.siapcn.it/installations/siapDesign/CutterViaggi/index.php?user=yEZuiKRBZWVY%2FqjjxVQzxg%3D%3D&pass=i8wWSZf7Yss3fj%2FHeB5Lng%3D%3D&operationalUnit=100';
-    protected readonly rsvpUrl = 'https://docs.google.com/forms/d/e/example/viewform';
+    protected readonly rsvpUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdmcA2JW700F4Vg0J3vy8Orny2fRW7lnhcphOfqa_j7JVLP_Q/viewform';
     protected readonly mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Antica%20Fattoria%20di%20Paterno';
 
     protected returnIcon(title: string): string {
