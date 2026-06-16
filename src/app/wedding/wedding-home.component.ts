@@ -40,9 +40,9 @@ export class WeddingHomeComponent {
     ];
 
     protected readonly carouselItems = [
-        {label: 'Corte esterna', src: '/antica fattoria/img.png'},
-        {label: 'Giardino', src: '/antica fattoria/img_1.png'},
-        {label: 'Vi aspettiamo!', src: '/antica fattoria/img_2.png'},
+        {label: 'Corte esterna', src: '/antica fattoria/img.webp'},
+        {label: 'Giardino', src: '/antica fattoria/img_1.webp'},
+        {label: 'Vi aspettiamo!', src: '/antica fattoria/img_2.webp'},
     ];
 
     protected readonly registryUrl = 'https://eventi.siapcn.it/installations/siapDesign/CutterViaggi/index.php?user=yEZuiKRBZWVY%2FqjjxVQzxg%3D%3D&pass=i8wWSZf7Yss3fj%2FHeB5Lng%3D%3D&operationalUnit=100';
