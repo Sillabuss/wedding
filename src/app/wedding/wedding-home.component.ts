@@ -11,8 +11,8 @@ import {NgClass, NgFor} from '@angular/common';
 export class WeddingHomeComponent {
     protected readonly quickLinks = [
         {label: 'La giornata', href: '#giornata'},
-        {label: 'La location', href: '#luogo'},
         {label: 'Lista nozze', href: '#lista-nozze'},
+        {label: 'La location', href: '#luogo'},
         {label: 'RSVP', href: '#rsvp'},
     ];
 
